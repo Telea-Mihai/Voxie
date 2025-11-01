@@ -21,3 +21,18 @@ For the project itself I have set up the raspberry pi, with which I had some dif
 As my next objective I have recording audio using the MAX4466 microphone.![WIN_20251031_16_44_27_Pro](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njk4MywicHVyIjoiYmxvYl9pZCJ9fQ==--647d019695adaba35fce1b8052617c263553e7bc/WIN_20251031_16_44_27_Pro.jpg)
   
 
+## 11/1/2025 - Making a mic circuit  
+
+So, after the experiments yesterday, I got started on working on the microphone. As I said I am using a Max4466 mic. The problem was noise and DC offset (2.5V in this case).
+
+For this I made a simple filter using a recycled capacitor from an old and broken arduino and some resistors and solved the dc offset issue. 
+
+For the noise, since I didn't have any small caps, I relied on software filters. Basically oversampling and averaging values to get rid of artifacts and noise
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzM5MSwicHVyIjoiYmxvYl9pZCJ9fQ==--c61e8cd562cea7cbca9e55228cce72d8abf48a77/image.png)
+(this is me doing a constant tone in the mic)
+
+Also in order to prepare for the next step which will be recording actual audio, all audio files work at around 16bit and 16khz samples. So for that some additional processing is done on the arduino in order to convert from the 10bit it can read from the analog pins. 
+
+All of this means when Idle the analog read hovers at around +- 2500, which is very good considering it's not completely silent (my laptop fans are spinning) and the as an idea the values are between -32768 (-512 * 64) so I can proudly say I got a nice mic circuit going, and the next step will be actually processing the samples and creating actual audio files.  
+
