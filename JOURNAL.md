@@ -25,7 +25,10 @@ As my next objective I have recording audio using the MAX4466 microphone.![WIN_2
 
 So, after the experiments yesterday, I got started on working on the microphone. As I said I am using a Max4466 mic. The problem was noise and DC offset (2.5V in this case).
 
-For this I made a simple filter using a recycled capacitor from an old and broken arduino and some resistors and solved the dc offset issue. 
+For this I made a simple filter using a recycled capacitor from an old and broken arduino and some resistors and solved the dc offset issue. Also I made my own small wires for the breadboard by cutting up jumper wires. I think it turned out pretty clean.
+
+![WhatsApp Image 2025-11-01 at 13.31.19_57afab41](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzM5MiwicHVyIjoiYmxvYl9pZCJ9fQ==--e1b06cafd28384d0a34690be79e8fd33934a1c05/WhatsApp%20Image%202025-11-01%20at%2013.31.19_57afab41.jpg)
+
 
 For the noise, since I didn't have any small caps, I relied on software filters. Basically oversampling and averaging values to get rid of artifacts and noise
 
